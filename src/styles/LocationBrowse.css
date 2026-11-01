@@ -1,0 +1,88 @@
+.loc-browse {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .loc-browse.desktop-only {
+    display: block;
+    max-width: 1120px;
+    margin: 0 auto 1.5rem;
+    padding: 0 20px;
+  }
+}
+
+.loc-browse-inner {
+  background: #fff;
+  border: 1px solid #E8E0D4;
+  border-radius: 16px;
+  padding: 22px 24px 10px;
+  width: 920px;
+  max-width: 90vw;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.loc-browse-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.loc-browse-head h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.loc-city-tabs,
+.loc-type-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.loc-city-tabs button,
+.loc-type-tabs button {
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: 999px;
+  padding: 7px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #475569;
+}
+
+.loc-city-tabs button.active,
+.loc-type-tabs button.active {
+  background: #1A1A1A;
+  color: #fff;
+  border-color: #1A1A1A;
+}
+
+.loc-type-tabs {
+  margin-bottom: 16px;
+}
+
+.loc-columns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px 18px;
+  padding-bottom: 12px;
+}
+
+.loc-link {
+  text-align: left;
+  background: none;
+  border: none;
+  color: #334155;
+  padding: 6px 0;
+  cursor: pointer;
+  font-size: 0.92rem;
+}
+
+.loc-link:hover {
+  color: #C9A84C;
+  text-decoration: underline;
+}

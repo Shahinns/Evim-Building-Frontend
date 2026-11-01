@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F7F4EF;
+  font-family: 'DM Sans', sans-serif;
+  color: #1A1A1A;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  min-height: 100vh;
+  background: #F7F4EF;
+}
+.page {
+  min-height: 100vh;
+  background: #F7F4EF;
+  padding-top: 0;
+}
+
+.page > * + * {
+  margin-top: 0;
+}
+
+/* Ana səhifə: filtr daha az yer tutsun, elanlar dərhal görünsün (scroll etmədən daha çox kart) */
+.page--home .hero .mobile-only {
+  display: none !important;
+}
+
+.page--home .hero {
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+@media (max-width: 900px) {
+  .page--home .hero {
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+  }
+}
+
+.home-loading {
+  text-align: center;
+  padding: 0.75rem 1rem 0.5rem;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.home-listings {
+  display: block;
+  scroll-margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .page--home .nax-wrapper {
+    padding-top: 4px;
+    padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .page--home .hero-deal-pill {
+    min-height: 36px;
+    padding: 0 6px;
+  }
+
+  .page--home .filter-chip.filter-chip--type {
+    min-height: 38px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .page--home .filter-chip.filter-chip--wide {
+    min-height: 38px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .page--home .filter-chips-container--top {
+    margin-bottom: 4px;
+  }
+}

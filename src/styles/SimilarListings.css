@@ -1,0 +1,143 @@
+/* ── SimilarListings.css ── */
+
+.sim-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #E0D8CC;
+}
+
+.sim-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.sim-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+.sim-see-all {
+  font-size: 0.88rem;
+  color: #C9A84C;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.sim-see-all:hover { opacity: 0.75; }
+
+/* Grid */
+.sim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+/* Kart */
+.sim-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  border: 1.5px solid #E0D8CC;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+}
+.sim-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.09);
+  border-color: #C9A84C;
+}
+
+/* Şəkil */
+.sim-img-wrap {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.sim-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s;
+}
+.sim-card:hover .sim-img { transform: scale(1.04); }
+
+.sim-badge {
+  position: absolute;
+  top: 8px; left: 8px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #fff;
+  letter-spacing: 0.03em;
+}
+.sim-badge.sale { background: #C9A84C; }
+.sim-badge.rent { background: #2E7D32; }
+
+.sim-premium {
+  position: absolute;
+  top: 8px; right: 8px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 3px 7px;
+  border-radius: 4px;
+  background: #1A1A1A;
+  color: #C9A84C;
+  letter-spacing: 0.05em;
+}
+
+/* Body */
+.sim-body {
+  padding: 0.85rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.sim-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #C9A84C;
+}
+
+.sim-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.sim-loc {
+  font-size: 0.78rem;
+  color: #6B6560;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sim-meta {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  font-size: 0.73rem;
+  color: #999;
+  margin-top: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .sim-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  .sim-img-wrap { height: 120px; }
+  .sim-title { font-size: 1.2rem; }
+}

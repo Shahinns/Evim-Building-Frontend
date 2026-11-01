@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
+.create-listing-page {
+  min-height: 100vh;
+  background: #F7F4EF;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.create-listing-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.create-listing-head h1 {
+  font-size: 1.65rem;
+  color: #1A1A1A;
+  margin: 0 0 0.35rem;
+}
+
+.create-listing-head p {
+  margin: 0;
+  color: #6B6560;
+  font-size: 0.9rem;
+}
+
+.create-listing-form {
+  margin-top: 1.75rem;
+  background: #fff;
+  border: 1px solid #E0D8CC;
+  border-radius: 1rem;
+  padding: 1.75rem;
+}
+
+.cl-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .cl-grid {
+    grid-template-columns: 1fr;
+  }
+  .cl-span-2 {
+    grid-column: span 1;
+  }
+}
+
+.cl-span-2 {
+  grid-column: span 2;
+}
+
+.cl-field label {
+  display: block;
+  font-size: 0.78rem;
+  color: #6B6560;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.cl-field input,
+.cl-field select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E0D8CC;
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.cl-field input:focus,
+.cl-field select:focus {
+  outline: none;
+  border-color: #C9A84C;
+}
+
+.cl-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #EEF0EB;
+}
+
+.cl-check {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  color: #1A1A1A;
+  cursor: pointer;
+}
+
+.cl-images {
+  margin-top: 1.5rem;
+}
+
+.cl-images-label {
+  display: block;
+  font-size: 0.78rem;
+  color: #6B6560;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.cl-images input[type="file"] {
+  font-size: 0.82rem;
+}
+
+.cl-previews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.cl-preview-thumb {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 0.45rem;
+  border: 1px solid #E0D8CC;
+}
+
+.create-listing-error {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  color: #A32D2D;
+  background: #FCEBEB;
+  border: 1px solid #F7C1C1;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.create-listing-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.cl-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cl-btn-primary {
+  background: #C9A84C;
+  color: #fff;
+  font-weight: 500;
+}
+
+.cl-btn-primary:hover:not(:disabled) {
+  background: #b8933c;
+}
+
+.cl-btn-ghost {
+  background: transparent;
+  color: #6B6560;
+  border: 1px solid #E0D8CC;
+}
+
+.cl-btn-ghost:hover {
+  border-color: #C9A84C;
+  color: #1A1A1A;
+}
+
+/* ── Bu qaydaları CreateListing.css-ə əlavə edin ── */
+
+/* Combined Location UI */
+.cl-location-combined {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cl-map-container {
+  border: 1.5px solid #E0D8CC;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 10px;
+  background: #fdfdfd;
+}
+
+.cl-sub-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.cl-selected-unvan-box {
+  margin-top: 1rem;
+  padding: 12px 16px;
+  background: #f0f7ff;
+  border: 1px solid #d0e3ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.cl-selected-unvan-box strong {
+  display: block;
+  font-size: 0.8rem;
+  color: #007bff;
+  margin-bottom: 4px;
+}
+
+.cl-selected-unvan-box p {
+  margin: 0;
+  font-weight: 600;
+  color: #1A1A1A;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Xəritə konteyneri */
+.cl-map-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #E0D8CC;
+}
+
+.cl-map {
+  width: 100%;
+  height: 320px;
+}
+
+.cl-map-hint {
+  margin: 0;
+  padding: 8px 12px;
+  font-size: 0.75rem;
+  color: #6B6560;
+  background: #f9fafb;
+  border-top: 1px solid #E0D8CC;
+}
